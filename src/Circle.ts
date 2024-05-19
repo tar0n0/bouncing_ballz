@@ -1,5 +1,3 @@
-// src/Circle.ts
-
 import { getRandomColor } from './utils/helpers';
 
 export class Circle {
@@ -23,7 +21,7 @@ export class Circle {
         this.canvas = canvas;
     }
 
-    update(deltaTime: number) {
+    update(deltaTime: number): void {
         this.dy += this.gravity * deltaTime;
         this.y += this.dy;
 
@@ -39,7 +37,7 @@ export class Circle {
         }
     }
 
-    draw(ctx: CanvasRenderingContext2D) {
+    draw(ctx: CanvasRenderingContext2D):void {
         ctx.save();
         ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
         ctx.shadowBlur = 10;

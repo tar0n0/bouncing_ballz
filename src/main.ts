@@ -68,7 +68,7 @@ function updateCircleCount(): void {
 function draw(): void {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     circles.forEach(circle => circle.draw(ctx));
-    const message = circles.length < 15 ? 'Click anywhere on the screen to spawn circles!' : 'You have reached the maximum circle count. Reset to start again.';
+    const message: string = circles.length < 15 ? 'Click anywhere on the screen to spawn circles!' : 'You have reached the maximum circle count. Reset to start again.';
     drawText(message);
 }
 
